@@ -12,6 +12,7 @@ body {
   align-items: center;
   background: linear-gradient(135deg, #434343, #1e1e1e);
   font-family: 'Work Sans', 'Inter', sans-serif;
+  user-select: none;
 }
 
 .main-container {
