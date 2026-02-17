@@ -1,94 +1,149 @@
 # Taskify (Just Do It) 📝
 
-**Taskify** is a minimalist, elegant To-Do list application designed to help users stay organized without the clutter. Built with vanilla JavaScript and styled with a modern dark-themed aesthetic, it ensures your tasks persist even after you close the browser.
+**Taskify** is a minimalist, elegant Progressive Web App (PWA) To-Do list application designed to help users stay organized without clutter. Built with vanilla JavaScript and styled with a modern dark theme, it works offline and can be installed like a native app.
 
 ---
 
 ## 🔗 Live Preview
-Check out the live demo here: [View Taskify Live](https://athvex.github.io/Taskify/)
+
+👉 **View Live:**
+[https://athvex.github.io/Taskify/](https://athvex.github.io/Taskify/)
 
 ---
 
 ## 🚀 Features
 
-* **Persistent Storage:** Uses `localStorage` so your tasks remain saved even if you refresh the page.
-* **Modern UI/UX:** Features a sleek dark-themed design with smooth CSS animations (typing effects and list transitions).
-* **CRUD Functionality:** Create, Read, Update, and Delete tasks seamlessly.
-* **Task Status:** Toggle tasks as "complete" with a striking striethrough effect.
-* **Responsive Design:** Fully functional across desktop, tablet, and mobile devices.
-* **Interactive GitHub Corner:** Includes a sleek, animated Octocat link to your profile.
+* ✅ **Persistent Storage** — Uses `localStorage` to save tasks even after refresh or browser close.
+* 📱 **Progressive Web App (PWA)** — Installable on desktop and mobile.
+* 🌐 **Offline Support** — Works without internet using a Service Worker.
+* ✨ **Modern UI/UX** — Dark-themed design with smooth animations.
+* 🔄 **CRUD Functionality** — Add, delete, and toggle tasks easily.
+* ✔️ **Task Status Toggle** — Mark tasks complete with strike-through effect.
+* 📲 **Responsive Design** — Optimized for desktop, tablet, and mobile.
+* 🐙 **Interactive GitHub Corner** — Animated Octocat profile link.
+
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-| --- | --- |
-| **Frontend** | HTML5, CSS3 |
-| **Logic** | Vanilla JavaScript (ES6+) |
-| **Icons** | Font Awesome 6.5.1 |
-| **Typography** | Google Fonts (Poppins, Work Sans) |
+| Layer      | Technology                        |
+| ---------- | --------------------------------- |
+| Frontend   | HTML5, CSS3                       |
+| Logic      | Vanilla JavaScript (ES6+)         |
+| Storage    | Browser localStorage              |
+| PWA        | Web App Manifest + Service Worker |
+| Icons      | Font Awesome 6.5.1                |
+| Typography | Google Fonts (Poppins, Work Sans) |
 
 ---
 
 ## 📂 Project Structure
 
-```text
-├── index.html          # Main application structure
+```
+Taskify
+├── index.html              # Main structure
+├── manifest.json           # PWA configuration
+├── service-worker.js       # Offline caching logic
 ├── CSS/
-│   ├── style.css       # Layout and application styling
-│   └── corner.css      # GitHub corner animation logic
+│   ├── style.css
+│   └── corner.css
 ├── JS/
-│   └── script.js       # Core logic and LocalStorage handling
+│   └── script.js
 ├── assets/
-│   └── todo.png        # Favicon/Logo
-└── README.md           # Documentation
+│   ├── icon-192.png        # PWA icon (192x192)
+│   ├── icon-512.png        # PWA icon (512x512)
+│   └── todo.png            # Favicon/logo
+├── LICENSE
+└── README.md
 ```
 
 ---
 
 ## ⚙️ Installation & Usage
 
-1. **Clone the repository:**
+### 1️⃣ Clone the Repository
+
 ```bash
-git clone https://github.com/athvex/taskify.git
+git clone https://github.com/athvex/Taskify.git
 ```
 
+### 2️⃣ Navigate into the Folder
 
-2. **Navigate to the folder:**
 ```bash
-cd taskify
+cd Taskify
 ```
 
+### 3️⃣ Run the Project
 
-3. **Open the app:**
-Simply open `index.html` in your favorite web browser.
+Open `index.html` in your browser
+OR use Live Server (recommended).
+
+---
+
+## 📱 Install as an App (PWA)
+
+1. Open the live website in Chrome.
+2. Click the address bar.
+3. Select **Install Taskify**.
+4. The app will now behave like a native application.
+
+It supports:
+
+* Offline mode
+* App-like full screen
+* Home screen icon
+
 ---
 
 ## 💡 How It Works
 
-1. **Adding Tasks:** When you submit a task, it's pushed into a `todos` array and saved to `localStorage` as a JSON string.
-2. **Rendering:** The application listens for changes and re-renders the DOM, assigning unique `data-key` attributes (based on `Date.now()`) to each item.
-3. **Persistence:** On page load, `getFromLocalStorage()` checks for existing data and restores your list immediately.
-4. **Animations:** The `removing` class is applied during deletion to trigger a slide-out effect before the element is actually removed from the DOM.
+### Adding Tasks
+
+Tasks are pushed into a `todos` array and stored in `localStorage` as a JSON string.
+
+### Rendering
+
+Each task is dynamically rendered in the DOM with a unique `data-key` (generated using `Date.now()`).
+
+### Persistence
+
+On page load, `getFromLocalStorage()` restores saved tasks automatically.
+
+### Offline Support
+
+The Service Worker caches:
+
+* `index.html`
+* CSS files
+* JS files
+* Manifest
+
+This allows the app to function even without internet.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome and appreciated.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+1. Fork the repository
+2. Create a branch
+   `git checkout -b feature/YourFeature`
+3. Commit changes
+   `git commit -m "Add new feature"`
+4. Push to branch
+   `git push origin feature/YourFeature`
 5. Open a Pull Request
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-**Project Link:** [https://github.com/athvex/taskify](https://github.com/athvex)
+Distributed under the MIT License. See `LICENSE` for details.
 
 ---
+
+## 👨‍💻 Author
+
+Atharva
+GitHub: [https://github.com/athvex](https://github.com/athvex)

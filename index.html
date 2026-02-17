@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="CSS/corner.css">
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="icon" type="image/png" href="./assets/todo.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50">
 </head>
 <body>
   <div class="version">
@@ -32,5 +34,11 @@
     </div>
   </div>
   <script src="JS/script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker Registered"));
+    }
+  </script>
 </body>
 </html>
