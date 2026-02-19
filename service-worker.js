@@ -1,9 +1,10 @@
-const CACHE_NAME = "taskify-v1";
+const CACHE_NAME = "taskify-v2";
 const urlsToCache = [
-  "/",
-  "index.html",
-  "CSS/style.css",
-  "JS/script.js"
+  "/Taskify/",
+  "/Taskify/index.html",
+  "/Taskify/CSS/style.css",
+  "/Taskify/JS/script.js",
+  "/Taskify/manifest.json"
 ];
 
 self.addEventListener("install", event => {

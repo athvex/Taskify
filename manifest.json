@@ -1,9 +1,11 @@
 {
+  "id": "/Taskify/index.html",
   "name": "Taskify",
   "short_name": "Taskify",
-  "start_url": "index.html",
+  "start_url": "/Taskify/index.html",
   "display": "standalone",
   "background_color": "#111111",
+  "description": "Taskify is a minimalist offline-first to-do list Progressive Web App that helps you stay organized with a clean dark interface.",
   "theme_color": "#111111",
   "icons": [
     {
@@ -15,6 +17,13 @@
       "src": "assets/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Add Task",
+      "url": "/Taskify/index.html",
+      "description": "Quickly add a new task"
     }
   ]
 }
